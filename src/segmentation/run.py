@@ -5,9 +5,9 @@ from predict import run_predict
 from check_sequencer import run_check_sequencer
 
 if __name__=='__main__':
-	#run_train()
-	#run_predict()
-	#run_test()
+	run_train()
+	run_predict()
+	run_test()
 	run_check_sequencer()
 
 # REMOTE PATH

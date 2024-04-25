@@ -13,7 +13,7 @@ def run_train():
 
 
 	callbacks = [
-		keras.callbacks.ModelCheckpoint(os.path.join(WEIGHTS_PATH, "weights.{epoch:02d}.hdf5"), 
+		keras.callbacks.ModelCheckpoint(os.path.join(WEIGHTS_PATH, "weights.{epoch:02d}.weights.h5"), 
 										save_best_only=False,
 										save_weights_only=True)
 	]
@@ -22,4 +22,4 @@ def run_train():
 	train_generator = InputSequencer(
 		train_img_paths
 	)
-	model.fit_generator(train_generator, epochs=NUM_EPOCHS, callbacks=callbacks)
+	model.fit(train_generator, epochs=NUM_EPOCHS, callbacks=callbacks)
